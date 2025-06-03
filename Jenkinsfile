@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        NODE_ENV = 'production'
+    }
+
     stages {
         stage('Clone Repo') {
             steps {
-                git 'main', url: 'https://github.com/preciouschidera/chat-app.git'
+                git branch: 'main', url: 'https://github.com/preciouschidera/chat-app.git'
             }
         }
 
