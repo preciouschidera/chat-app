@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/preciouschidera/chat-app.git'
+                git 'main', url: 'https://github.com/preciouschidera/chat-app.git'
             }
         }
 
